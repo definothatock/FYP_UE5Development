@@ -8,11 +8,13 @@ FYP source code and assets.
 
 **Motivation:** Popularity of cooperative multiplayer: Sharing fun on social media; Emotional bonding with friends.
 
+<img width="906" height="510" alt="image" src="https://github.com/user-attachments/assets/966bb0fa-2e26-4fe8-a0ad-7187e64cc898" />
+
 # Status: Paused
   - The project reached playable Alpha and scored A-/A. Academically it fulfilled its purpose.
   - Manpower shifts. The current project scope exceeds what the remaining team members can maintain effectively.
     
-# Repo Detail
+# Repo Summary
 
 **Due to data size limitations of Git, the actual source code cannot be stored directly. Only some C++ source is provided here.**
 
@@ -41,6 +43,8 @@ Link to Final Report: https://drive.google.com/file/d/1Z5-iRUh7Rwk64DlKsWoWm-pX6
 Link to Initial Proposal: https://drive.google.com/file/d/1ZlZn71hoDVWVREwAHO6I64GH2-1oVaNV/view?usp=sharing
 
 Link to Final Presentation: https://canva.link/4eh446oulrhd68v
+
+Link to Final Project Video: https://www.youtube.com/watch?v=pSdOJv4ez60&feature=youtu.be
 
 Link to Obsidian (Project Documentation): https://github.com/definothatock/definothatock_Obsidian_FYP_UE5Development
 
