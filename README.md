@@ -30,9 +30,8 @@ Link to project source and build: https://drive.google.com/drive/folders/15YsW0U
 - **Belinda:** _Inventory System_
 
 ### External asset:
-Model: Sketchfab
-
-Sounds: Pixabay
+- Model: Sketchfab
+- Sounds: Pixabay
 
 # Other 
 ## This project was NOT handled with Git, it was handled with PEFORCE. This Git repo exists for making the project public.
