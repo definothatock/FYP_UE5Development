@@ -16,6 +16,7 @@ FYP source code and assets.
     
 # Repo Summary
 
+### This project was NOT handled with Git, it was handled with PEFORCE. This Git repo exists for making the project publicly visible.
 **Due to data size limitations of Git, the actual source code cannot be stored directly. Only some C++ source is provided here.**
 
 Link to project source and build: https://drive.google.com/drive/folders/15YsW0UiWATZ4QReXA3oK9_aicjV1xRbe?usp=sharing
@@ -35,8 +36,7 @@ Link to project source and build: https://drive.google.com/drive/folders/15YsW0U
 - Model: Sketchfab
 - Sounds: Pixabay
 
-# Other 
-## This project was NOT handled with Git, it was handled with PEFORCE. This Git repo exists for making the project public.
+# Project Details (external) 
 
 Link to Final Report: https://drive.google.com/file/d/1Z5-iRUh7Rwk64DlKsWoWm-pX60PgoRi7/view?usp=drive_link
 
