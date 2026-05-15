@@ -7,7 +7,7 @@ FYP source code and assets.
 
 Link to project source and build: https://drive.google.com/drive/folders/15YsW0UiWATZ4QReXA3oK9_aicjV1xRbe?usp=sharing
 
-- Source zip contains everything (including compiled binaries, intermediate, etc) up until the final official submission.
+- Source zip contains important data only (limited storage in 3rd party storage services), up until the final official submission.
 - Build zip contains the last playable version (wired for Steam connection, multiplayer requires the same Steam downloading-server region).
 
 ## Status: Paused.
