@@ -19,7 +19,7 @@ FYP source code and assets.
 ### This project was NOT handled with Git, it was handled with PEFORCE. This Git repo exists for making the project publicly visible.
 **Due to data size limitations of Git, the actual source code cannot be stored directly. Only some C++ source is provided here.**
 
-project source and build: https://drive.google.com/drive/folders/15YsW0UiWATZ4QReXA3oK9_aicjV1xRbe?usp=sharing
+project source and build: https://mega.nz/file/JRkTBZjR#ruYwuswSobcet8J0qzZYCgseCZBzuDQ8WdVdt_JMLTA
 
 - Source zip contains important data only (cloud limit, running requires recompile and setup), up until the final official submission.
 - Build zip contains the last playable version (wired for Steam connection, multiplayer requires the same Steam downloading-server region).
