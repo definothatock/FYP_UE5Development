@@ -1,0 +1,325 @@
+// Copyright (C) Created by Ad, UST 2526 FYP team, code AR1.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "FWorkingMemoryDataStructs.generated.h"
+
+DECLARE_LOG_CATEGORY_EXTERN(WorkingMemory, Warning, All);
+
+/*
+ * small reminder I got from AI:
+ * 
+ * Summary: Why do these systems fail?
+ * If you are looking to implement Rain World-like dynamics, these are the three traps that killed the games above:
+ *
+ * The "Smart Coward" Problem: If you make an AI truly smart and self-preserving (like EverQuest Next), it will realize the Player is the most dangerous thing in the world and hide. This is realistic, but boring.
+ * The Unreadability Issue: If an AI has 50 different internal variables (Trespasser), the player will likely only perceive two states: "It's attacking me" or "It's broken." Complexity that cannot be communicated to the player is wasted processing power.
+ * Narrative Destabilization: If the AI is too dynamic (Oblivion), it destroys the authored content. You cannot have a scripted story if the key actor decided to walk off a cliff because their "Depression" stat was high.
+ *
+ * Note-to-self: 
+ * I can smell,
+ * 	"Smart Coward": creatures are too smart at staying alive mathematically. Tho, player always being the prey in the world should minimize the effect. Can kinda ignore?
+ * 	"Unreadability": Player cant read data (and it is also quite a pain in the ass for me to read), adding that I need to tackle this in the state tree.
+ * 	"Oscillation": I still havent use those Margin and stuff yet.
+ * 	"Performance": prepared for event trigger, not converted yet.
+ * Also, other issue,
+ * 	Later on most actual AI actions will done wia EQS. EQS itself is a distance deterministic system, if my scores are dipped with distance, I am double-dipping scales.
+ * 
+ */
+ 
+/*
+ * ============================================================
+ * "Perception" provide "World View" (working memory),"World View" creates "Motivations/Drives", "Motive" "drives" "Actions".
+ * 
+ * All time dependent values are in unit of seconds.
+ * ============================================================
+ */
+
+
+/*
+ * ====================
+ * Interface structs
+ * ====================
+ */
+
+
+/*
+ * Interface: for quick AI sense tweaking.
+ * Meant to be stored in Controller or any other actual owner of the working memories, not per Work Mem entry.
+ * For calculating final Scores.
+ */
+USTRUCT(BlueprintType)
+struct FWorkingMemoryScoringProfile
+{
+	GENERATED_BODY()
+
+	/* I dont think all of these are needed. Might delete some later. */
+	
+	// The cutoff distance where further Subjects are consider as not "close".
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Scoring Profile")
+	float SafeRange = 2000.0f;
+	// higher = more important for longer
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Scoring Profile")
+	float RecencyHalfLife = 10.0f;
+	// To limit jittering. How much more that the current Subject to trigger a switch
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Scoring Profile")
+	float SwitchMargin = 0.15f;
+	// Also to limit jittering (or lower it to make self do some funny emote lmao)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Scoring Profile")
+	float SwitchCooldownSeconds = 1.0f;
+
+	/* Perception Sense Bias. */
+
+	// "Observation". should share teh same pie with other "Observation".
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Scoring Profile | Sense Bias")
+	float Vision_AwarenessWeight = 0.7f;
+	// "Observation". should share teh same pie with other "Observation".
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Scoring Profile | Sense Bias")
+	float Audio_AwarenessWeight = 0.3f;
+	// How "strong" self feels "pain".
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Scoring Profile | Sense Bias")
+	float DamageStim_Amplifier = 5.0f;
+	// How "uncomfortable" self feels when being too closed (touched).
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Scoring Profile | Sense Bias")
+	float TouchStim_Amplifier = 2.0f;
+	// How "concerned" the close the Subject gets. (currently +1 in score calculation, so instead of reducing further subject, it increases close subjects.)
+	// UPROPERTY(EditAnywhere, BlueprintReadWrite,  meta = (ClampMin = "0.0", ClampMax = "1.0"),Category="Working Memory | Perception Scales")
+	// float Proximity_Exponent = 2.f;
+};
+
+
+/* Placeholder. I am not making this before the entire system stabilized. This is entirely complimentary to the system, not required.
+// Global behaviour modifier.
+USTRUCT(BlueprintType)
+struct FPersonality
+{
+
+	// Curiosity / Indifference
+	// Aggression / Cowardice 
+	// Dominance / Submission
+	// ... ...
+	
+};
+*/
+
+
+/*
+ * ====================
+ * Internal Structs
+ *
+ * Evaluation Flowmap:
+ * Signals + Subject context + GlobalScores -> DerivedScores per subject.
+ * all entries' DerivedScores -> Drives.
+ * Drives -> Actions.
+ *
+ * some specific Sub-drive (motivation) can be selected via Subject context + GlobalScores.
+ * ====================
+ */
+
+
+/*
+ * Perception Signals per entry (how valid/important is the stimulus?), fetched from raw sense data.
+ * All Normalized to 0~1 (Clamped).
+ */
+USTRUCT(BlueprintType)
+struct FPerceptionSignals
+{
+	GENERATED_BODY()
+	
+	// 1 = clear and confirmed, accumulated LOS. Issue: unreal's vision is definite. Need to make a vision cure elsewhere.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,  meta = (ClampMin = "0.0", ClampMax = "1.0"), Category="Working Memory | Perception Scales | Observation")
+	float VisionStimFactor = 0.f;
+	// Clamp(audio strength). Already involved with relative distance in Unreal (End-Of-BucketList: for shocking with "huge audio spike" like explosion, do it elsewhere.)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,  meta = (ClampMin = "0.0", ClampMax = "1.0"), Category="Working Memory | Perception Scales | Observation")
+	float AudioStimFactor = 0.f;
+	// 1 = currently touching/hit. (End-Of-BucketList: can make it a small scaled "awareness circle"?)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,  meta = (ClampMin = "0.0", ClampMax = "1.0"), Category="Working Memory | Perception Scales | Imminent")
+	float TouchStimFactor = 0.f;
+	// AccumulatedDmg / MaxHP, The most direct way to tell if the Subject is a threat.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,  meta = (ClampMin = "0.0", ClampMax = "1.0"), Category="Working Memory | Perception Scales | Imminent")
+	float DamageStimFactor = 0.f;
+	// 1 - Clamp(Distance / SafeRange), How close is the Subject to self.
+	// Be mindful with double distance scaling. some sense already scaled with distance.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,  meta = (ClampMin = "0.0", ClampMax = "1.0"),Category="Working Memory | Perception Scales")
+	float DistanceFactor = 0.f;
+};
+
+
+/*
+ * Final Scores per entry, calculated form Subject Data.
+ * Represents the self's "Opinion"/"understanding" of a specific Subject.
+ *
+ * Note-to-self: none of these should have direct scaling with distance, unless "Attention". (some indirect like hearing strength cannot avoid tho)
+ * Issue: Threat is not clamped (uni_threat can be huge), need to find a way to balance.
+ */
+USTRUCT(BlueprintType)
+struct FWorkingMemorySubjectOpinions
+{
+	GENERATED_BODY()
+
+	// Clamped.
+	// How "reliable" my current belief about this subject is? (Am I uncertain about what/where the subject is?)
+	// Drives "discovery", seek for more information/confirmation.
+	// Prevents premature reactions, overreacting to faint signals. (or perhaps makes Creature "observe" before commiting?)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Derived Scores")
+	float CertaintyScore = 0.f; 
+
+	// Not Clamped.
+	// How "dangerous" the subject is right "now"? (If this subject engages me now, how bad can it get?)
+	// Drives "responses", fight/flight targeting.
+	// Does not directly reflect Targeting/Motivations. ("prey" can have very low threat but still has higher priority than "neutral")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Derived Scores")
+	float ThreatScore = 0.f;
+
+	// Not Clamped (direct-relate to threat).
+	// How "intimidating" the subject is? (how much psychological pressure I felt from it?)
+	// Modify "responses". e.g. avoidance, flanking, hiding...
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Derived Scores")
+	float IntimidationScore = 0.f;
+
+	// Clamped.
+	// How "valuable" the Subject is? (what reward I get from engaging?)
+	// Drives "goals", e.g. prey/loot/objective.
+	// May still attempt to engage if the target is hard to resist.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Derived Scores")
+	float ValueScore = 0.f;
+
+	// Not Clamped (direct-relate to threat).
+	// How "important" the Subject is? (should I really care this guy?)
+	// Drives "targeting".
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Derived Scores")
+	float AttentionScore = 0.f; // Max(Threat, Value) * DistanceFactor ?
+
+	// Issue: Major overlapping with LastSensedTime in Entry.h. Consider keep either one. Whenever sensed sth, Entry will definitely update and reevaluate. 
+	// for calculating Lazy HalfLife.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Derived Scores")
+	float LastEvalTime = 0.f;
+	
+	/* other scores that are not within the current scope: creature to creature engagement. */
+	
+	// Too much for now. // can be used to soft lock certain loot/passage from player.
+	// UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Derived Scores")
+	// float Territorial = 0.f;
+	
+	// Too much for now/too much to let player weave their own narrative, imagination.
+	// higher level of awareness. while reaching goal, this Subject (often not the current target) is obstructing self. 
+	// UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Derived Scores")
+	// float Nuisance = 0.f;
+};
+
+/*
+ * Non duplicated Scores own by The MemArray owner (self).
+ * For self evaluation.
+ */
+USTRUCT(BlueprintType)
+struct FWorkingMemoryOverallSituations
+{
+	GENERATED_BODY()
+	
+	// How capable am I right now? (health, WorkMem swap-rate, etc ?)
+	// This MUST be the first to process in evaluation. To know others, must first know self.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | asGlobal Scores")
+	float Capability = 0.f;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Global Scores")
+	float TotalThreat = 0.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Global Scores")
+	float TopThreat = 0.f;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Working Memory | Global Scores")
+	FGuid TopThreatGuid;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Working Memory | Global Scores")
+	float TopValue = 0.f;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Working Memory | Global Scores")
+	FGuid TopValueGuid;
+		
+	// Mental stability. High value causes panic attack, decision storms.
+	// Blends Damage taken/Health pool, FearScore, 
+	// UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Derived Scores")
+	// float StressScore = 0.f;
+};
+
+
+/*
+ * Non duplicated Scores own by The MemArray owner (self), sum up score of all entries.
+ * 
+ * Broader Motivations/Drives (for the sake of simplicity, no separation here). Obtained from DerivedScores, selects the highest value to pick the Root Branch.
+
+ * These capture the intention of the acts (mood, needs, goal), practically working as context switch: Same acts can have different motivation, because self have difference end goal (outcome).
+ * Foe instance, Investigation can mean very differently in Aggressive / Neutral: one can be attempting to hunt, later one can be just curious (exploratory behavior).
+ * 
+ * However, exact "Motive" will not be calculated, as they are too trivial and insignificant to players. Players only want to "feel" the AI is trying to do something, slight ambiguity might even be beneficial.
+ * Also, Exact action will not be decided here. That is StateTree's job.
+ *
+ * Future: modified by personality?
+ */
+USTRUCT(BlueprintType)
+struct FWorkingMemoryOverallDrives
+{
+	GENERATED_BODY()
+
+	// The Urge to Conquer.
+	// Purpose: Apply costs, constraints, interruptions to Subject; to force a response if possible
+	// High when: (High Value || High Threat) + Low Intimidation.
+	// Possible Actions: Rush towards target, intimidate, flank
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Drives Scores")
+	float AggressiveDrives = 0.f;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FGuid AggressiveTarget_EGuid;
+
+	// The Urge to Know.
+	// Purpose: Seek information from Subject, mainly to improves self's knowledge / awareness.
+	// High when: Low Certainty + Low TotalThreat + Moderate Attention.
+	// Possible Actions: Move to last known position, look at, listen.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Drives Scores")
+	float InvestigateDrives = 0.f;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FGuid InvestigateTarget_EGuid;
+
+	// The Urge to Survive.
+	// Purpose: Prioritize managing self, or avoids engaging / interrupting
+	// High when: High Threat + High Intimidation.
+	// Possible Actions: Self-Defense
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Drives Scores")
+	float SurvivalDrives = 0.f;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FGuid SurvivalTarget_EGuid;
+
+	// The need for Preserve.
+	// Purpose: No explicit priority/drive/motive, not excited enough to do anything purposefully.
+	// High when: All other scores are low.
+	// Possible subcategory in State Tree: Self-Defense
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Working Memory | Drives Scores")
+	float IdleDrives = 0.f;
+
+	// Add this only after the eval system has stabilized.
+	// to reduce jittering "motive"/"goal"/"behaviour".
+	// float DriveTolerance = 0.f;
+
+	// Add this only after the eval system has stabilized.
+	// to reduce jittering target switch.
+	// float TargetingStability = 0.f;
+	
+	// THIS WILL NOT BE MADE UNLESS THE ENTIRE GAME ARCHITECTURE IS MATURED.
+	// float PlayDrives = 0.f; // or blend into Idle
+
+	// THIS WILL NOT BE MADE UNLESS THE ENTIRE GAME ARCHITECTURE IS MATURED.
+	// float DesperationDrives = 0.f; // highly tides with stress
+
+	//Reset
+	void Reset()
+	{
+		AggressiveDrives = 0.f;
+		InvestigateDrives = 0.f;
+		SurvivalDrives = 0.f;
+		AggressiveTarget_EGuid = FGuid();
+		InvestigateTarget_EGuid = FGuid();
+		SurvivalTarget_EGuid = FGuid();
+	}
+};
+
+
