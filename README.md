@@ -8,12 +8,12 @@ FYP source code and assets.
   - Manpower shifts. The current project scope exceeds what the remaining team members can maintain effectively.
 
 ### Main Contributor (with main contributions):
-- Definothatock: _Initial Design; AI behavioural system; Multiplayer connection system (supports Steam/LAN); General game subsystems (e.g. generic health system)_
-- Tonny (LO): _World Generation system and most of its surrounding features and subsystems._
-- Danny (HO): _All custom modelling and animation; many smaller subsystems (e.g. most existing mini games)_
+- Definothatock:   _Initial Design; AI behavioural system; Multiplayer connection system (supports Steam/LAN); General game subsystems (e.g. generic health system)_
+- Tonny (LO):     _World Generation system and most of its surrounding features and subsystems._
+- Danny (HO):     _All custom modelling and animation; many smaller subsystems (e.g. most existing mini games)_
 
 ### Other Contributor:
-- Belinda: _Inventory System_
+- Belinda:       _Inventory System_
 
 ### External asset:
 Model: Sketchfab
@@ -24,6 +24,8 @@ Sounds: Pixabay
 
 
 Link to Obsidian doc: https://github.com/definothatock/definothatock_Obsidian_FYP_UE5Development
+
 Link to Final Report:
+
 Link to Initial Proposal:
 
