@@ -19,7 +19,7 @@ FYP source code and assets.
 ### This project was NOT handled with Git, it was handled with PEFORCE. This Git repo exists for making the project publicly visible.
 **Due to data size limitations of Git, the actual source code cannot be stored directly. Only some C++ source is provided here.**
 
-Link to project source and build: https://drive.google.com/drive/folders/15YsW0UiWATZ4QReXA3oK9_aicjV1xRbe?usp=sharing
+project source and build: https://drive.google.com/drive/folders/15YsW0UiWATZ4QReXA3oK9_aicjV1xRbe?usp=sharing
 
 - Source zip contains important data only (cloud limit, running requires recompile and setup), up until the final official submission.
 - Build zip contains the last playable version (wired for Steam connection, multiplayer requires the same Steam downloading-server region).
@@ -38,14 +38,14 @@ Link to project source and build: https://drive.google.com/drive/folders/15YsW0U
 
 # Project Details (external) 
 
-Link to Final Report: https://drive.google.com/file/d/1Z5-iRUh7Rwk64DlKsWoWm-pX60PgoRi7/view?usp=drive_link
+Final Report: https://drive.google.com/file/d/1Z5-iRUh7Rwk64DlKsWoWm-pX60PgoRi7/view?usp=drive_link
 
-Link to Initial Proposal: https://drive.google.com/file/d/1ZlZn71hoDVWVREwAHO6I64GH2-1oVaNV/view?usp=sharing
+Final Presentation: https://canva.link/4eh446oulrhd68v
 
-Link to Final Presentation: https://canva.link/4eh446oulrhd68v
+Final Project Video: https://www.youtube.com/watch?v=pSdOJv4ez60&feature=youtu.be
 
-Link to Final Project Video: https://www.youtube.com/watch?v=pSdOJv4ez60&feature=youtu.be
+Initial Proposal: https://drive.google.com/file/d/1ZlZn71hoDVWVREwAHO6I64GH2-1oVaNV/view?usp=sharing
 
-Link to Obsidian (Project Documentation): https://github.com/definothatock/definothatock_Obsidian_FYP_UE5Development
+Obsidian (Project Documentation): https://github.com/definothatock/definothatock_Obsidian_FYP_UE5Development
 
-Link to Trello (Team task management): https://trello.com/b/qntsQkkn/fyp-main-board
+Trello (Team task management): https://trello.com/b/qntsQkkn/fyp-main-board
