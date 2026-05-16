@@ -9,9 +9,12 @@ FYP source code and assets.
 
 <img width="906" height="510" alt="image" src="https://github.com/user-attachments/assets/966bb0fa-2e26-4fe8-a0ad-7187e64cc898" />
 
+<br>
+<br>
+
 ## Main Features:
 
-### - Procedural Map Generation
+### - **Procedural Map Generation**  
 > Newly generated map each round  
 <img width="240" height="240" alt="Video Project 6" src="https://github.com/user-attachments/assets/2c641f5e-3f04-4cf2-8d4a-87233e2e9eb4" />
 <br>
@@ -22,17 +25,17 @@ FYP source code and assets.
 <img width="243" height="159" alt="image" src="https://github.com/user-attachments/assets/f86212ea-892c-42ad-ac92-d3f950e49386" />
 <img width="190" height="152" alt="image" src="https://github.com/user-attachments/assets/5210596c-caff-4aac-ad8a-aeeb85f3f8f9" />
 
-
-
+<br>
 <br>
 
-### - Multiplayer  
+### - **Multiplayer**  
 > Supporting voice chat and Steam/LAN connection  
-<img width="875" height="451" alt="mine" src="https://github.com/user-attachments/assets/c3a5cdaf-6ced-4e8b-b800-83e3c5fedfb2" />
+<img width="366" height="185" alt="image" src="https://github.com/user-attachments/assets/5c9118a9-83dd-4596-b88d-9f4eaee366cd" />
 
 <br>
+<br>
 
-### - Inventory System  
+### - **Inventory System**  
 > Spatial for resource management  
 <img width="320" height="240" alt="inv" src="https://github.com/user-attachments/assets/efa119ca-9afa-41fd-ac78-9ee9d0c232de" />
 <br>
@@ -43,14 +46,23 @@ FYP source code and assets.
 <img width="426" height="240" alt="lift" src="https://github.com/user-attachments/assets/7f3bc785-7df6-4abc-b199-3c4226c05ba3" />
 <img width="426" height="240" alt="shock" src="https://github.com/user-attachments/assets/3c9d00de-7fd6-47bd-9587-e5bffc3409ce" />
 
-### - Engaging AI  
-AI has unique behaviours and memories  
+<br>
+<br>
+
+### - **Engaging AI**  
+> unique behaviours and memories  
 <img width="426" height="240" alt="blast" src="https://github.com/user-attachments/assets/94abc362-bc76-4c4e-b412-45ad7c8d3441" />
 <img width="426" height="240" alt="targeting" src="https://github.com/user-attachments/assets/cb955935-54e6-45f9-935e-70fa649e59d1" />
 <img width="426" height="240" alt="sneaking" src="https://github.com/user-attachments/assets/dfa172d6-9c52-4cca-accf-86ef2cbe269b" />
 
+<br>
+<br>
 
+### - **Stylized  Visual**  
+<img width="734" height="339" alt="image" src="https://github.com/user-attachments/assets/52ae4caa-e420-4589-923f-c3cc250b153c" />
+<img width="641" height="374" alt="image" src="https://github.com/user-attachments/assets/70f48a7f-db39-4a4f-9598-111c44595634" />
 
+<br>
 <br>
 
 # Status: Paused
