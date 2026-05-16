@@ -120,7 +120,9 @@ _Build zip contains the last playable version (wired for Steam connection, multi
 
 <br>
 
-# Project Details (external) 
+# Project Details
+
+ ## External links to detailed documentations
 
 Final Report: https://drive.google.com/file/d/1Z5-iRUh7Rwk64DlKsWoWm-pX60PgoRi7/view?usp=drive_link  
 
@@ -133,3 +135,25 @@ Initial Proposal: https://drive.google.com/file/d/1ZlZn71hoDVWVREwAHO6I64GH2-1oV
 Obsidian (Project Documentation): https://github.com/definothatock/definothatock_Obsidian_FYP_UE5Development  
 
 Trello (Team task management): https://trello.com/b/qntsQkkn/fyp-main-board  
+
+## Academic comment of the project
+
+Initial Proposal
+> I find the proposal well-organized and thorough. The literature survey comparing different games is good, with concrete observations about what each game gets wrong. The objectives are clear, and the methodology section goes deep -- covering resource management, game rules, multiplayer architecture, even communication trade-offs. Some pages feel wastefully empty, which is a minor presentation issue. Overall, a strong proposal. <br>
+--mingxunz
+
+Development Progress
+> The amount of work done is substantial -- modular health/stamina systems (server-authoritative, which is good for anti-cheating), a spatial inventory framework, distinct creature AIs using UE5's State Tree, procedural terrain generation, multiplayer via Steam, and custom shaders for ambience. The item design stands out -- the Cute Gun, Cloud Generator, and Tablet are not just functional but designed with player psychology in mind. I appreciate the thoughtful design for each item. The VoIP section shows deep engineering effort. They honestly describe encountering a lifecycle race condition with UE's built-in VoIP and made the pragmatic decision to switch to a third-party plugin. <br>
+--mingxunz
+
+Final Delevery
+> The students managed to make a playable and synchronized alpha version within a pretty tight time frame. It's very well done. The terrain generation system is very impressive while the autonomous enemy system is still developing but interesting. / <br>
+The final report shows the students made tremendous amount of effort in making a deliverable game. The terrain system, the characters' movement and the autonomous enemy AI look solid. The report is thorough and professional. The drawback: the delivery looks a bit unpolished. Many elements other than the main winning goal (puzzles, etc) make the game looks messy. The students also mentioned their original goal was not achieved because the goal was too ambitious. <br>
+--mingxunz
+
+
+
+
+<br><br>
+
+Special thanks to our Supervisor Prof. **Sunil Arya**, Reader Assistant Prof. **Mingxun ZHOU**, and Tutor Miss **Noor Liza MD ISA**.
