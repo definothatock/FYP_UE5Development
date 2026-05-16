@@ -1,4 +1,4 @@
-Original documentation language: [English](README.md)  
+文档原始语言: [English](README.md)  
 项目内容均以英语版本为准
 
 # 项目摘要
