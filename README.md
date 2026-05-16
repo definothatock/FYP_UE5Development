@@ -92,7 +92,7 @@ There might be small refinements in the future. However, due to limitations of G
   
 - **Danny, HO:**  
   3C Programmer / Gameplay Programmer  
-    _All custom modelling and animation; many smaller subsystems (e.g. mini games)_
+    _Most of the direct Player interactions; All custom modelling and animation; many smaller subsystems (e.g. mini games)_
 
 ### Other Contributor:
 - **Belinda:** _Inventory System_
