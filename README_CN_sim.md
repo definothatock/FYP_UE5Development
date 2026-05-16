@@ -93,7 +93,7 @@ Original documentation language: [English](README.md)
 
 - **Danny, HO：**  
   3C 程序员 / Gameplay 程序员  
-  _所有自定义建模与动画；许多较小型子系统（例如小游戏）。_
+  _玩家互动功能；所有自定义建模与动画；许多较小型子系统（例如小游戏）。_
 
 ### 其他贡献者：
 - **Belinda：** _物品栏系统_
