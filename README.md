@@ -10,42 +10,56 @@ FYP source code and assets.
 
 <img width="906" height="510" alt="image" src="https://github.com/user-attachments/assets/966bb0fa-2e26-4fe8-a0ad-7187e64cc898" />
 
+<br>
+
 # Status: Paused
   - The project reached playable Alpha and scored A-/A. Academically it fulfilled its purpose.
   - Manpower shifts. The current project scope exceeds what the remaining team members can maintain effectively.
-    
+
+<br>
+
 # Repo Summary
 
 ### This project was NOT handled with Git, it was handled with PEFORCE. This Git repo exists for making the project publicly visible.
 **Due to data size limitations of Git, the actual source code cannot be stored directly. Only some C++ source is provided here.**
 
-project source and build: https://mega.nz/file/JRkTBZjR#ruYwuswSobcet8J0qzZYCgseCZBzuDQ8WdVdt_JMLTA
+Project source: https://mega.nz/file/JRkTBZjR#ruYwuswSobcet8J0qzZYCgseCZBzuDQ8WdVdt_JMLTA  
+_Source zip contains important data only (cloud limit, running requires recompile and setup), up until the final official submission._
 
-- Source zip contains important data only (cloud limit, running requires recompile and setup), up until the final official submission.
-- Build zip contains the last playable version (wired for Steam connection, multiplayer requires the same Steam downloading-server region).
+Project Build: https://drive.google.com/file/d/1JyHeKAsFSqjTNmDESFGndiOMVn2ZsTow/view?usp=drive_link  
+_Build zip contains the last playable version (wired for Steam connection, multiplayer requires the same Steam downloading-server region)._
+
+<br>
 
 ### Main Contributor (with main contributions):
-- **Andy, CHIU (Definothatock):** _Initial Design; AI behavioural system; Multiplayer connection system (supports Steam/LAN); General game subsystems (e.g. generic health system)_
-- **Tonny, LO:** _World Generation system and most of its surrounding features and subsystems._
-- **Danny, HO:** _All custom modelling and animation; many smaller subsystems (e.g. most existing mini games)_
+- **Andy, CHIU (Definothatock):**  
+    _Initial Design; AI behavioural system; Multiplayer connection system (supports Steam/LAN); General game subsystems (e.g. generic health system)_
+- **Tonny, LO:**  
+    _World Generation system and most of its surrounding features and subsystems._
+- **Danny, HO:**  
+    _All custom modelling and animation; many smaller subsystems (e.g. most existing mini games)_
 
 ### Other Contributor:
 - **Belinda:** _Inventory System_
+
+<br>
 
 ### External asset:
 - Model: Sketchfab
 - Sounds: Pixabay
 
+<br>
+
 # Project Details (external) 
 
-Final Report: https://drive.google.com/file/d/1Z5-iRUh7Rwk64DlKsWoWm-pX60PgoRi7/view?usp=drive_link
+Final Report: https://drive.google.com/file/d/1Z5-iRUh7Rwk64DlKsWoWm-pX60PgoRi7/view?usp=drive_link  
 
-Final Presentation: https://canva.link/4eh446oulrhd68v
+Final Presentation: https://canva.link/4eh446oulrhd68v  
 
-Final Project Video: https://www.youtube.com/watch?v=pSdOJv4ez60&feature=youtu.be
+Final Project Video: https://www.youtube.com/watch?v=pSdOJv4ez60&feature=youtu.be  
 
-Initial Proposal: https://drive.google.com/file/d/1ZlZn71hoDVWVREwAHO6I64GH2-1oVaNV/view?usp=sharing
+Initial Proposal: https://drive.google.com/file/d/1ZlZn71hoDVWVREwAHO6I64GH2-1oVaNV/view?usp=sharing  
 
-Obsidian (Project Documentation): https://github.com/definothatock/definothatock_Obsidian_FYP_UE5Development
+Obsidian (Project Documentation): https://github.com/definothatock/definothatock_Obsidian_FYP_UE5Development  
 
-Trello (Team task management): https://trello.com/b/qntsQkkn/fyp-main-board
+Trello (Team task management): https://trello.com/b/qntsQkkn/fyp-main-board  
