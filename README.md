@@ -1,3 +1,6 @@
+[简体中文 CN_sim](README_CN_sim.md)
+
+
 # Project Abstract
 
   - Project Title:  
