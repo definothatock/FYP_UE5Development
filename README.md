@@ -36,7 +36,7 @@ Popularity of cooperative multiplayer: Sharing fun on social media; Emotional bo
 ## Main Features:
 
 ### - **Procedural Map Generation**  
-> Newly generated map each round  
+> Newly generated map for each round  
 <img width="240" height="240" alt="Video Project 6" src="https://github.com/user-attachments/assets/2c641f5e-3f04-4cf2-8d4a-87233e2e9eb4" />
 <br>
 <br>
