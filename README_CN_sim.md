@@ -1,4 +1,4 @@
-CN_sim
+Original documentation language: [English](README.md)
 
 # 项目摘要
 
