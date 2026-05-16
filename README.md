@@ -1,13 +1,15 @@
 # Project Abstract
 
-FYP_UE5Development
-FYP source code and assets.
-  - Project Title: _Lord of the Flies: Cooperative Multiplayer Resources Scavenging Game_
-  - Internal code: AR1 25-26
+  - Project Title:  
+    _Lord of the Flies: Cooperative Multiplayer Resources Scavenging Game_
+  - Internal code:  
+    AR1 25-26
 
-**Objectives:** A cooperative scavenging extraction game set in a post-apocalyptic world.
+**Objectives:**  
+A cooperative scavenging extraction game set in a post-apocalyptic world.
 
-**Motivation:** Popularity of cooperative multiplayer: Sharing fun on social media; Emotional bonding with friends.
+**Motivation:**  
+Popularity of cooperative multiplayer: Sharing fun on social media; Emotional bonding with friends.
 
 <img width="906" height="510" alt="image" src="https://github.com/user-attachments/assets/966bb0fa-2e26-4fe8-a0ad-7187e64cc898" />
 
@@ -92,7 +94,7 @@ _Build zip contains the last playable version (wired for Steam connection, multi
 - **Tonny, LO:**  
     _World Generation system and most of its surrounding features and subsystems._
 - **Danny, HO:**  
-    _All custom modelling and animation; many smaller subsystems (e.g. most existing mini games)_
+    _All custom modelling and animation; many smaller subsystems (e.g. mini games)_
 
 ### Other Contributor:
 - **Belinda:** _Inventory System_
