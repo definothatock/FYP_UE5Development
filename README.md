@@ -1,4 +1,6 @@
 Other available language: [简体中文 CN_sim](README_CN_sim.md) | [繁體中文 CN_tra](README_CN_tra.md)
+<br>
+The English version shall prevail in all matters relating to this project.
 
 # Repo Summary
 
