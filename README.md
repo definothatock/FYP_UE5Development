@@ -87,7 +87,7 @@ There might be small refinements in the future. However, due to limitations of G
     _Initial Design; AI behavioural system; Multiplayer connection system (supports Steam/LAN); General game subsystems (e.g. generic health system)_
   
 - **Tonny, LO:**  
-  System Programmer  
+  System Programmer / Scene Designer  
     _World Generation system and most of its surrounding features and subsystems._
   
 - **Danny, HO:**  
