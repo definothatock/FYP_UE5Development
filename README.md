@@ -84,7 +84,7 @@ There might be small refinements in the future. However, due to limitations of G
 
 - **Andy, CHIU (Definothatock):**  
   Project Lead / System Programmer  
-    _Initial Design; AI behavioural system; Multiplayer connection system (supports Steam/LAN); General game subsystems (e.g. generic health system)_
+    _Initial Design; AI behavioural system; Multiplayer connection system; General game subsystems (e.g. generic health system)_
   
 - **Tonny, LO:**  
   System Programmer / Scene Designer  
