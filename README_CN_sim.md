@@ -88,7 +88,7 @@ Original documentation language: [English](README.md)
   _初始设计；AI 行为系统；多人连接系统（支持 Steam / 局域网）；通用游戏子系统（例如通用生命值系统）_
 
 - **Tonny, LO：**  
-  系统程序员  
+  系统程序员 / 场景设计
   _世界生成系统以及其大部分相关功能与子系统。_
 
 - **Danny, HO：**  
