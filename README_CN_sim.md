@@ -85,10 +85,10 @@ CN_sim
 ### 本项目并不是使用 Git 管理，而是使用 PEFORCE 管理。这个 Git 仓库的存在只是为了让项目能够公开展示。
 **由于 Git 的数据大小限制，实际源代码无法直接存储于此。这里仅提供部分 C++ 源代码。**
 
-项目源码：`https://mega.nz/file/JRkTBZjR#ruYwuswSobcet8J0qzZYCgseCZBzuDQ8WdVdt_JMLTA`  
+项目源码：https://mega.nz/file/JRkTBZjR#ruYwuswSobcet8J0qzZYCgseCZBzuDQ8WdVdt_JMLTA  
 _源码压缩包只包含重要数据（受云端容量限制，运行前需要重新编译和配置），内容截至最终正式提交版本。_
 
-项目构建版本：`https://drive.google.com/file/d/1JyHeKAsFSqjTNmDESFGndiOMVn2ZsTow/view?usp=drive_link`  
+项目构建版本：https://drive.google.com/file/d/1JyHeKAsFSqjTNmDESFGndiOMVn2ZsTow/view?usp=drive_link  
 _构建压缩包包含最后一个可游玩的版本（已接入 Steam 连接，联机需要相同的 Steam 下载服务器地区）。_
 
 <br>
@@ -120,14 +120,14 @@ _构建压缩包包含最后一个可游玩的版本（已接入 Steam 连接，
 
 # 项目详情（外部）
 
-最终报告：`https://drive.google.com/file/d/1Z5-iRUh7Rwk64DlKsWoWm-pX60PgoRi7/view?usp=drive_link`  
+最终报告：https://drive.google.com/file/d/1Z5-iRUh7Rwk64DlKsWoWm-pX60PgoRi7/view?usp=drive_link
 
-最终演示：`https://canva.link/4eh446oulrhd68v`  
+最终演示：https://canva.link/4eh446oulrhd68v  
 
-最终项目视频：`https://www.youtube.com/watch?v=pSdOJv4ez60&feature=youtu.be`  
+最终项目视频：https://www.youtube.com/watch?v=pSdOJv4ez60&feature=youtu.be  
 
-初始提案：`https://drive.google.com/file/d/1ZlZn71hoDVWVREwAHO6I64GH2-1oVaNV/view?usp=sharing`  
+初始提案：https://drive.google.com/file/d/1ZlZn71hoDVWVREwAHO6I64GH2-1oVaNV/view?usp=sharing  
 
-Obsidian（项目文档）：`https://github.com/definothatock/definothatock_Obsidian_FYP_UE5Development`  
+Obsidian（项目文档）：https://github.com/definothatock/definothatock_Obsidian_FYP_UE5Development  
 
-Trello（团队任务管理）：`https://trello.com/b/qntsQkkn/fyp-main-board`
+Trello（团队任务管理）：https://trello.com/b/qntsQkkn/fyp-main-board
