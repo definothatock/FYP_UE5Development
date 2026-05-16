@@ -80,19 +80,6 @@ There might be small refinements in the future. However, due to limitations of G
 
 <br>
 
-# Repo Summary
-
-### This project was NOT handled with Git, it was handled with PEFORCE. This Git repo exists for making the project publicly visible.
-**Due to data size limitations of Git, the actual source code cannot be stored directly. Only some C++ source is provided here.**
-
-Project source: https://mega.nz/file/JRkTBZjR#ruYwuswSobcet8J0qzZYCgseCZBzuDQ8WdVdt_JMLTA  
-_Source zip contains important data only (cloud limit, running requires recompile and setup), up until the final official submission._
-
-Project Build: https://drive.google.com/file/d/1JyHeKAsFSqjTNmDESFGndiOMVn2ZsTow/view?usp=drive_link  
-_Build zip contains the last playable version (wired for Steam connection, multiplayer requires the same Steam downloading-server region)._
-
-<br>
-
 ### Main Contributor (main role & contributions):
 
 - **Andy, CHIU (Definothatock):**  
@@ -115,6 +102,21 @@ _Build zip contains the last playable version (wired for Steam connection, multi
 ### External asset:
 - Model: Sketchfab
 - Sounds: Pixabay
+
+<br>
+
+# Repo Summary
+
+### This project was NOT handled with Git, it was handled with PEFORCE. This Git repo exists for making the project publicly visible.
+**Due to data size limitations of Git, the actual source code cannot be stored directly. Only some C++ source is provided here.**
+
+Project source: https://mega.nz/file/JRkTBZjR#ruYwuswSobcet8J0qzZYCgseCZBzuDQ8WdVdt_JMLTA  
+_Source zip contains important data only (cloud limit, running requires recompile and setup), up until the final official submission._
+
+Project Build: https://drive.google.com/file/d/1JyHeKAsFSqjTNmDESFGndiOMVn2ZsTow/view?usp=drive_link  
+_Build zip contains the last playable version (wired for Steam connection, multiplayer requires the same Steam downloading-server region)._
+
+
 
 <br>
 
