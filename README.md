@@ -1,4 +1,4 @@
-[简体中文 CN_sim](README_CN_sim.md)
+Other available language: [简体中文 CN_sim](README_CN_sim.md)
 
 
 # Project Abstract
