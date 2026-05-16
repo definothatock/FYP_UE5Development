@@ -90,12 +90,18 @@ _Build zip contains the last playable version (wired for Steam connection, multi
 
 <br>
 
-### Main Contributor (with main contributions):
+### Main Contributor (main role & contributions):
+
 - **Andy, CHIU (Definothatock):**  
+  Project Lead / System Programmer  
     _Initial Design; AI behavioural system; Multiplayer connection system (supports Steam/LAN); General game subsystems (e.g. generic health system)_
+  
 - **Tonny, LO:**  
+  System Programmer  
     _World Generation system and most of its surrounding features and subsystems._
+  
 - **Danny, HO:**  
+  3C Programmer / Gameplay Programmer  
     _All custom modelling and animation; many smaller subsystems (e.g. mini games)_
 
 ### Other Contributor:
