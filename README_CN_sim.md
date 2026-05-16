@@ -1,6 +1,19 @@
 文档原始语言: [English](README.md)  
 项目内容均以英语版本为准
 
+# 仓库摘要
+
+### 本项目并不是使用 Git 管理，而是使用 PEFORCE 管理。这个 Git 仓库的存在只是为了让项目能够公开展示。
+**由于 Git 的数据大小限制，实际源代码无法直接存储于此。这里仅提供部分 C++ 源代码。**
+
+项目源码：https://mega.nz/file/JRkTBZjR#ruYwuswSobcet8J0qzZYCgseCZBzuDQ8WdVdt_JMLTA  
+_源码压缩包只包含重要数据（受云端容量限制，运行前需要重新编译和配置），内容截至最终正式提交版本。_
+
+项目构建版本：https://drive.google.com/file/d/1JyHeKAsFSqjTNmDESFGndiOMVn2ZsTow/view?usp=drive_link  
+_构建压缩包包含最后一个可游玩的版本（已接入 Steam 连接，联机需要相同的 Steam 下载服务器地区）。_
+
+<br>
+
 # 项目摘要
 
 - 项目名称：  
@@ -104,19 +117,6 @@
 ### 外部素材：
 - 模型：Sketchfab
 - 音效：Pixabay
-
-<br>
-
-# 仓库摘要
-
-### 本项目并不是使用 Git 管理，而是使用 PEFORCE 管理。这个 Git 仓库的存在只是为了让项目能够公开展示。
-**由于 Git 的数据大小限制，实际源代码无法直接存储于此。这里仅提供部分 C++ 源代码。**
-
-项目源码：https://mega.nz/file/JRkTBZjR#ruYwuswSobcet8J0qzZYCgseCZBzuDQ8WdVdt_JMLTA  
-_源码压缩包只包含重要数据（受云端容量限制，运行前需要重新编译和配置），内容截至最终正式提交版本。_
-
-项目构建版本：https://drive.google.com/file/d/1JyHeKAsFSqjTNmDESFGndiOMVn2ZsTow/view?usp=drive_link  
-_构建压缩包包含最后一个可游玩的版本（已接入 Steam 连接，联机需要相同的 Steam 下载服务器地区）。_
 
 <br>
 
