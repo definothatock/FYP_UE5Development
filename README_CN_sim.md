@@ -158,4 +158,4 @@ The final report shows the students made tremendous amount of effort in making a
 
 
 <br><br>
-特别感谢我们的导师 **Sunil Arya** 教授, **Mingxun ZHOU** 副教授, 以及辅导员 **Noor Liza MD ISA**.
+特别感谢我们的导师 **Sunil Arya** 教授, **Mingxun ZHOU** 副教授, 以及辅导员 **Noor Liza MD ISA** 女士.
