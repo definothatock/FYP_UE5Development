@@ -1,4 +1,3 @@
-# Project Abstract
 FYP_UE5Development
 FYP source code and assets.
   - Project Title: _Lord of the Flies: Cooperative Multiplayer Resources Scavenging Game_
@@ -9,6 +8,36 @@ FYP source code and assets.
 **Motivation:** Popularity of cooperative multiplayer: Sharing fun on social media; Emotional bonding with friends.
 
 <img width="906" height="510" alt="image" src="https://github.com/user-attachments/assets/966bb0fa-2e26-4fe8-a0ad-7187e64cc898" />
+
+## Main Features:
+
+### - Procedural Map Generation
+> Newly generated map each round  
+<img width="240" height="240" alt="Video Project 6" src="https://github.com/user-attachments/assets/2c641f5e-3f04-4cf2-8d4a-87233e2e9eb4" />
+
+<br>
+
+### - Multiplayer  
+> Supporting voice chat and Steam/LAN connection  
+<img width="417" height="330" alt="image" src="https://github.com/user-attachments/assets/b64ceddc-e260-469d-9cd0-212943d53aaf" />
+
+<br>
+
+### - Inventory System  
+> Spatial for resource management  
+<img width="320" height="240" alt="inv" src="https://github.com/user-attachments/assets/efa119ca-9afa-41fd-ac78-9ee9d0c232de" />
+<br>
+<br>
+
+> Interesting items
+<img width="426" height="240" alt="bounce" src="https://github.com/user-attachments/assets/3f45229d-bc18-4053-b5a7-d31ba75de34f" />
+<img width="426" height="240" alt="hide" src="https://github.com/user-attachments/assets/2de1b0c0-9a4a-421c-9f15-8ed224e7c6d7" />
+<img width="426" height="240" alt="lift" src="https://github.com/user-attachments/assets/7f3bc785-7df6-4abc-b199-3c4226c05ba3" />
+<img width="426" height="240" alt="shock" src="https://github.com/user-attachments/assets/3c9d00de-7fd6-47bd-9587-e5bffc3409ce" />
+
+
+
+
 
 <br>
 
