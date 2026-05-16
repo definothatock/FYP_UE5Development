@@ -85,7 +85,7 @@ Original documentation language: [English](README.md)
 
 - **Andy, CHIU（Definothatock）：**  
   项目策划 / 系统程序员  
-  _初始设计；AI 行为系统；多人连接系统（支持 Steam / 局域网）；通用游戏子系统（例如通用生命值系统）_
+  _初始设计；AI 行为系统；多人连接系统；通用游戏子系统（例如通用生命值系统）_
 
 - **Tonny, LO：**  
   系统程序员 / 场景设计  
