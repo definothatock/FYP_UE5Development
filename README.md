@@ -71,7 +71,9 @@ Popularity of cooperative multiplayer: Sharing fun on social media; Emotional bo
 
 # Status: Paused
   - The project reached playable Alpha and scored A-/A. Academically it fulfilled its purpose.
-  - Manpower shifts. The current project scope exceeds what the remaining team members can maintain effectively.
+  - Manpower shifts. After the academic submission, the number of members who decided to remain is not enough to maintain the initially planned system depth.
+
+There might be small refinements in the future. However, due to limitations of Git, updates will not be reflected in this specific repo.
 
 <br>
 
