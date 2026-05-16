@@ -122,7 +122,7 @@ _Build zip contains the last playable version (wired for Steam connection, multi
 
 # Project Details
 
- ## External links to detailed documentations
+### External links to detailed documentations
 
 Final Report: https://drive.google.com/file/d/1Z5-iRUh7Rwk64DlKsWoWm-pX60PgoRi7/view?usp=drive_link  
 
@@ -136,7 +136,9 @@ Obsidian (Project Documentation): https://github.com/definothatock/definothatock
 
 Trello (Team task management): https://trello.com/b/qntsQkkn/fyp-main-board  
 
-## Academic comment of the project
+<br>
+
+### Academic comment on the project
 
 Initial Proposal
 > I find the proposal well-organized and thorough. The literature survey comparing different games is good, with concrete observations about what each game gets wrong. The objectives are clear, and the methodology section goes deep -- covering resource management, game rules, multiplayer architecture, even communication trade-offs. Some pages feel wastefully empty, which is a minor presentation issue. Overall, a strong proposal. <br>
