@@ -113,7 +113,7 @@ There might be small refinements in the future. However, due to limitations of G
 
 <br>
 
-### External asset:
+### External assets:
 - Model: Sketchfab
 - Sounds: Pixabay
 
@@ -134,6 +134,21 @@ Initial Proposal: https://drive.google.com/file/d/1ZlZn71hoDVWVREwAHO6I64GH2-1oV
 Obsidian (Project Documentation): https://github.com/definothatock/definothatock_Obsidian_FYP_UE5Development  
 
 Trello (Team task management): https://trello.com/b/qntsQkkn/fyp-main-board  
+
+### Technical Diagrams
+
+### - **Overall System Archetecture**
+<img width="1235" height="755" alt="sacvppt" src="https://github.com/user-attachments/assets/cb495441-1488-43ca-a81c-61db31f7df16" />
+
+### - **AI Behaviral System**
+<img width="877" height="383" alt="Screenshot 2026-08-24 213846" src="https://github.com/user-attachments/assets/dfc702c8-1edd-4c83-98a1-15ee6e0d0f84" />
+
+### - **Connection Flow**
+<img width="433" height="381" alt="Screenshot 2026-08-24 214024" src="https://github.com/user-attachments/assets/621ceeb0-e7c0-4fdc-8c67-a05ef6611388" />
+
+### - **Procedural Map Generation system**
+<img width="1692" height="478" alt="pcg" src="https://github.com/user-attachments/assets/ab4013fd-7a0a-4583-bba2-955096ee4592" />
+
 
 <br>
 
