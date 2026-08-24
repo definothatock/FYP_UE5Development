@@ -136,6 +136,20 @@ Obsidian（项目文档）：https://github.com/definothatock/definothatock_Obsi
 
 Trello（团队任务管理）：https://trello.com/b/qntsQkkn/fyp-main-board
 
+### 技术图表
+
+### - 总体系统架构
+<img width="800" height="400" alt="sacvppt" src="https://github.com/user-attachments/assets/cb495441-1488-43ca-a81c-61db31f7df16" />
+
+### - AI 行为系统
+<img width="800" height="400" alt="Screenshot 2026-08-24 213846" src="https://github.com/user-attachments/assets/dfc702c8-1edd-4c83-98a1-15ee6e0d0f84" />
+
+### - 连接流程
+<img width="433" height="381" alt="Screenshot 2026-08-24 214024" src="https://github.com/user-attachments/assets/621ceeb0-e7c0-4fdc-8c67-a05ef6611388" />
+
+### - 程序化地图生成系统
+<img width="800" height="200" alt="pcg" src="https://github.com/user-attachments/assets/ab4013fd-7a0a-4583-bba2-955096ee4592" />
+
 <br>
 
 ### 项目的学术评论
